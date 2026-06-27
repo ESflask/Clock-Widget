@@ -228,6 +228,10 @@ struct ClockFaceDesign: Codable, Equatable {
     /// 盤面に重ねるカスタム文字列（空なら非表示）
     var customText: String
 
+    // --- 盤面サイズ ---
+    /// 時計盤の相対サイズ 0.4〜1.0（表示領域に対する縮尺）
+    var faceScale: Double
+
     static let `default` = ClockFaceDesign(
         style: .analog,
         tintHex: "#FFFFFF",
@@ -256,7 +260,8 @@ struct ClockFaceDesign: Codable, Equatable {
         leadingZero: true,
         showDate: false,
         showWeekday: false,
-        customText: ""
+        customText: "",
+        faceScale: 1.0
     )
 
     // 欠損キーを default で補完する寛容なデコーダ
@@ -291,6 +296,7 @@ struct ClockFaceDesign: Codable, Equatable {
         showDate          = try c.decodeIfPresent(Bool.self, forKey: .showDate) ?? d.showDate
         showWeekday       = try c.decodeIfPresent(Bool.self, forKey: .showWeekday) ?? d.showWeekday
         customText        = try c.decodeIfPresent(String.self, forKey: .customText) ?? d.customText
+        faceScale         = try c.decodeIfPresent(Double.self, forKey: .faceScale) ?? d.faceScale
     }
 
     // メンバーワイズ初期化子（init(from:) を定義したため明示的に用意）
@@ -322,7 +328,8 @@ struct ClockFaceDesign: Codable, Equatable {
         leadingZero: Bool,
         showDate: Bool,
         showWeekday: Bool,
-        customText: String
+        customText: String,
+        faceScale: Double
     ) {
         self.style = style
         self.tintHex = tintHex
@@ -352,6 +359,7 @@ struct ClockFaceDesign: Codable, Equatable {
         self.showDate = showDate
         self.showWeekday = showWeekday
         self.customText = customText
+        self.faceScale = faceScale
     }
 }
 

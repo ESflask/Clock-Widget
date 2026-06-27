@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var design: ClockFaceDesign = ClockFaceStore.load()
+    @State private var showFullScreen = false
 
     var body: some View {
         NavigationStack {
@@ -28,6 +29,9 @@ struct ContentView: View {
                     Toggle("秒を表示", isOn: $design.showSeconds)
                 }
 
+                // 盤面サイズ（全スタイル共通）
+                SizeEditorSection(design: $design)
+
                 // 色・背景（A）
                 ColorEditorSection(design: $design)
 
@@ -49,6 +53,18 @@ struct ContentView: View {
                 PresetEditorSection(design: $design)
             }
             .navigationTitle("時計ウィジェット編集")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showFullScreen = true
+                    } label: {
+                        Label("全画面", systemImage: "arrow.up.left.and.arrow.down.right")
+                    }
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showFullScreen) {
+            FullScreenClockView(design: design)
         }
         .onChange(of: design) { _, newValue in
             ClockFaceStore.save(newValue)

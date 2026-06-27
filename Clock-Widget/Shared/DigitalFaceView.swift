@@ -8,14 +8,16 @@ struct DigitalFaceView: View {
 
     var body: some View {
         Text(timeString)
-            .font(.system(size: 200,
+            .font(.system(size: 500,
                           weight: design.fontWeight.weight,
                           design: design.digitalFont.fontDesign))
             .monospacedDigit()
             .foregroundStyle(design.tintColor)
             .lineLimit(1)
-            .minimumScaleFactor(0.05)
+            .minimumScaleFactor(0.01)
             .allowsTightening(true)
+            // 利用可能領域いっぱいに広げ、その中で最大サイズにスケールさせる
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     // MARK: - 時刻文字列生成
