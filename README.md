@@ -1,6 +1,6 @@
 # Clock-Widget
-<img width="1726" height="800" alt="image" src="https://github.com/user-attachments/assets/ad377204-bd88-418f-a12d-d216906aad73" />
-<img width="1170" height="626" alt="image" src="https://github.com/user-attachments/assets/18757b8d-248f-426e-b498-8ba67404c75c" />
+<img width="864" height="400" alt="image" src="https://github.com/user-attachments/assets/ad377204-bd88-418f-a12d-d216906aad73" />
+<img width="748" height="400" alt="image" src="https://github.com/user-attachments/assets/18757b8d-248f-426e-b498-8ba67404c75c" />
 
 iPhone のホーム画面に、**アプリで編集したお好みのデザインの時計盤をウィジェットとして配置できる**アプリケーションです。
 
