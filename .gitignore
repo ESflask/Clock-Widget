@@ -16,3 +16,7 @@ xcuserdata/
 # CocoaPods / Carthage (if used later)
 Pods/
 Carthage/Build/
+
+# Claude Code local config / personal notes
+.claude/
+Claude-pra.md

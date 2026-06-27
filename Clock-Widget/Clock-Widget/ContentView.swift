@@ -1,41 +1,22 @@
-//
-//  ContentView.swift
-//  Clock-Widget
-//
-
 import SwiftUI
 
 struct ContentView: View {
     @State private var design: ClockFaceDesign = ClockFaceStore.load()
 
-    private var tintColor: Binding<Color> {
-        Binding(
-            get: { Color(hex: design.tintHex) },
-            set: { design.tintHex = $0.hexString }
-        )
-    }
-
-    private var backgroundColor: Binding<Color> {
-        Binding(
-            get: { Color(hex: design.backgroundHex) },
-            set: { design.backgroundHex = $0.hexString }
-        )
-    }
-
     var body: some View {
         NavigationStack {
             Form {
+                // ライブプレビュー
                 Section {
                     ClockFaceView(design: design, date: .now)
-                        .frame(maxWidth: .infinity)
-                        .aspectRatio(1, contentMode: .fit)
-                        .frame(maxWidth: 220)
-                        .background(Color(hex: design.backgroundHex))
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 168, height: 168)
+                        .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.vertical, 8)
                         .listRowBackground(Color.clear)
                 }
 
+                // 共通設定（スタイル・秒表示）
                 Section("スタイル") {
                     Picker("スタイル", selection: $design.style) {
                         ForEach(ClockFaceStyle.allCases) { style in
@@ -43,28 +24,34 @@ struct ContentView: View {
                         }
                     }
                     .pickerStyle(.segmented)
-                }
 
-                Section("カラー") {
-                    ColorPicker("前景色", selection: tintColor, supportsOpacity: false)
-                    ColorPicker("背景色", selection: backgroundColor, supportsOpacity: false)
-                }
-
-                Section("表示") {
                     Toggle("秒を表示", isOn: $design.showSeconds)
-
-                    if design.style == .dotMatrix {
-                        VStack(alignment: .leading) {
-                            Text("ドットサイズ")
-                            Slider(value: $design.dotSize, in: 0.3...1.0)
-                        }
-                    }
                 }
+
+                // 色・背景（A）
+                ColorEditorSection(design: $design)
+
+                // スタイル別の意匠（B/C/D）
+                if design.style == .analog {
+                    AnalogEditorSection(design: $design)
+                }
+                if design.style == .dotMatrix {
+                    DotMatrixEditorSection(design: $design)
+                }
+                if design.style == .digital {
+                    DigitalEditorSection(design: $design)
+                }
+
+                // 付加情報（E）
+                InfoEditorSection(design: $design)
+
+                // プリセット（F）
+                PresetEditorSection(design: $design)
             }
             .navigationTitle("時計ウィジェット編集")
-            .onChange(of: design) { _, newValue in
-                ClockFaceStore.save(newValue)
-            }
+        }
+        .onChange(of: design) { _, newValue in
+            ClockFaceStore.save(newValue)
         }
     }
 }

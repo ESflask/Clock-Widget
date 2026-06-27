@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA000000000000000000001B /* ClockWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000011 /* ClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA0000000000000000000030 /* ClockFaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000020 /* ClockFaceModel.swift */; };
 		AA0000000000000000000031 /* ClockFaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* ClockFaceStore.swift */; };
 		AA0000000000000000000032 /* ClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000022 /* ClockFaceView.swift */; };
 		AA0000000000000000000033 /* ClockFaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000020 /* ClockFaceModel.swift */; };
 		AA0000000000000000000034 /* ClockFaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* ClockFaceStore.swift */; };
 		AA0000000000000000000035 /* ClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000022 /* ClockFaceView.swift */; };
-		AA000000000000000000001B /* ClockWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000011 /* ClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA0000000000000000000040 /* ClockBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000023 /* ClockBackgroundView.swift */; };
+		AA0000000000000000000041 /* AnalogFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000024 /* AnalogFaceView.swift */; };
+		AA0000000000000000000042 /* DotMatrixFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000025 /* DotMatrixFaceView.swift */; };
+		AA0000000000000000000043 /* DigitalFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000026 /* DigitalFaceView.swift */; };
+		AA0000000000000000000044 /* ComplicationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000027 /* ComplicationOverlay.swift */; };
+		AA0000000000000000000045 /* ClockPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000028 /* ClockPreset.swift */; };
+		AA0000000000000000000050 /* ClockBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000023 /* ClockBackgroundView.swift */; };
+		AA0000000000000000000051 /* AnalogFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000024 /* AnalogFaceView.swift */; };
+		AA0000000000000000000052 /* DotMatrixFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000025 /* DotMatrixFaceView.swift */; };
+		AA0000000000000000000053 /* DigitalFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000026 /* DigitalFaceView.swift */; };
+		AA0000000000000000000054 /* ComplicationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000027 /* ComplicationOverlay.swift */; };
+		AA0000000000000000000055 /* ClockPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000028 /* ClockPreset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +58,12 @@
 		AA0000000000000000000020 /* ClockFaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockFaceModel.swift; sourceTree = "<group>"; };
 		AA0000000000000000000021 /* ClockFaceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockFaceStore.swift; sourceTree = "<group>"; };
 		AA0000000000000000000022 /* ClockFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockFaceView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000023 /* ClockBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockBackgroundView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000024 /* AnalogFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogFaceView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000025 /* DotMatrixFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMatrixFaceView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000026 /* DigitalFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalFaceView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000027 /* ComplicationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationOverlay.swift; sourceTree = "<group>"; };
+		AA0000000000000000000028 /* ClockPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockPreset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -104,6 +122,12 @@
 				AA0000000000000000000020 /* ClockFaceModel.swift */,
 				AA0000000000000000000021 /* ClockFaceStore.swift */,
 				AA0000000000000000000022 /* ClockFaceView.swift */,
+				AA0000000000000000000023 /* ClockBackgroundView.swift */,
+				AA0000000000000000000024 /* AnalogFaceView.swift */,
+				AA0000000000000000000025 /* DotMatrixFaceView.swift */,
+				AA0000000000000000000026 /* DigitalFaceView.swift */,
+				AA0000000000000000000027 /* ComplicationOverlay.swift */,
+				AA0000000000000000000028 /* ClockPreset.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -220,6 +244,12 @@
 				AA0000000000000000000030 /* ClockFaceModel.swift in Sources */,
 				AA0000000000000000000031 /* ClockFaceStore.swift in Sources */,
 				AA0000000000000000000032 /* ClockFaceView.swift in Sources */,
+				AA0000000000000000000040 /* ClockBackgroundView.swift in Sources */,
+				AA0000000000000000000041 /* AnalogFaceView.swift in Sources */,
+				AA0000000000000000000042 /* DotMatrixFaceView.swift in Sources */,
+				AA0000000000000000000043 /* DigitalFaceView.swift in Sources */,
+				AA0000000000000000000044 /* ComplicationOverlay.swift in Sources */,
+				AA0000000000000000000045 /* ClockPreset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +260,12 @@
 				AA0000000000000000000033 /* ClockFaceModel.swift in Sources */,
 				AA0000000000000000000034 /* ClockFaceStore.swift in Sources */,
 				AA0000000000000000000035 /* ClockFaceView.swift in Sources */,
+				AA0000000000000000000050 /* ClockBackgroundView.swift in Sources */,
+				AA0000000000000000000051 /* AnalogFaceView.swift in Sources */,
+				AA0000000000000000000052 /* DotMatrixFaceView.swift in Sources */,
+				AA0000000000000000000053 /* DigitalFaceView.swift in Sources */,
+				AA0000000000000000000054 /* ComplicationOverlay.swift in Sources */,
+				AA0000000000000000000055 /* ClockPreset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +470,7 @@
 		AA0000000000000000000016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "ClockWidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = ClockWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 23463RRK7R;
@@ -465,7 +501,7 @@
 		AA0000000000000000000017 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "ClockWidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = ClockWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 23463RRK7R;
@@ -486,9 +522,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
